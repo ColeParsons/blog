@@ -1,2 +1,3 @@
 # blog
-blog(not finished)
+blog(not finished).
+Launch date is currently unknown.
