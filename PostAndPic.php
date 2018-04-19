@@ -3,13 +3,11 @@
 session_start();
 include_once("db.php");
 
-
-
 if(isset($_POST['userImage'] && is_uploaded_file($_FILES['userImage']['tmp_name'])) {
+    
     $category = strip_tags($_POST['category']);
     $title = strip_tags($_POST['title']);
     $content = strip_tags($_POST['content']);
-
 
     $category = mysqli_real_escape_string($db, $category);
     $title = mysqli_real_escape_string($db, $title);
@@ -17,12 +15,6 @@ if(isset($_POST['userImage'] && is_uploaded_file($_FILES['userImage']['tmp_name'
 
 
     $date = date('jS F Y h:i:s A');
-
-
-
-
-
-
 
 
     if(count($_FILES) > 0) {
@@ -47,9 +39,6 @@ if(isset($_POST['userImage'] && is_uploaded_file($_FILES['userImage']['tmp_name'
         }
 
     }
-
-
-
 
 
 
