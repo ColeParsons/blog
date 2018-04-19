@@ -57,10 +57,6 @@ header("Location: AboutJeni.php");
     <a class="fa fa-tumblr-square" href="http://jenibeeee.tumblr.com/" style="font-size:36px; text-shadow: none; margin-left:-70px; "></a>
     <a  href="s9g3v.php" style="letter-spacing: 0; margin-right:-390px; margin-left:324px;">Post</a>
 
-
-
-
-
 </aside>
 
 
@@ -84,10 +80,6 @@ header("Location: AboutJeni.php");
 <body>
 <?php
 echo '<figure <a  href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" class="img2"  width="1120" style="margin-left:45px; margin-right:0;"  height="365"  /></a></figure>';
-
-
-
-
 
 
 echo'<div class="container">
@@ -157,9 +149,6 @@ if(mysqli_num_rows($res) > 0) {
 
     }
 }
-
-
-
 
 
 
