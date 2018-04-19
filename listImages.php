@@ -1,13 +1,11 @@
 <?php
 $db = mysqli_connect("localhost", "root", "");
-
 $sql = "SELECT imageId FROM output_images ORDER BY imageId DESC";
 $result = mysqli_query($db,$sql);
 ?>
 <HTML>
 <HEAD>
     <TITLE>List BLOB Images</TITLE>
-
 </HEAD>
 <BODY>
 <?php
