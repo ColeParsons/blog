@@ -3,35 +3,26 @@
 session_start();
 include_once("db.php");
 
-
-
 if(isset($_POST['category'])) {
+    
     $category = strip_tags($_POST['category']);
     $title = strip_tags($_POST['title']);
     $content = strip_tags($_POST['content']);
 
-
     $category = mysqli_real_escape_string($db, $category);
     $title = mysqli_real_escape_string($db, $title);
     $content = mysqli_real_escape_string($db, $content);
-
-
     $date = date('jS F Y h:i:s A');
-
-
-
 
     if(count($_FILES) > 0) {
 
         $category = strip_tags($_POST['category']);
         $title = strip_tags($_POST['title']);
         $content = strip_tags($_POST['content']);
-
-
+        
         $category = mysqli_real_escape_string($db, $category);
         $title = mysqli_real_escape_string($db, $title);
         $content = mysqli_real_escape_string($db, $content);
-
 
         $date = date('jS F Y h:i:s A');
 
@@ -46,7 +37,6 @@ if(isset($_POST['category'])) {
             $imageProperties = getimageSize($_FILES['userImage']['tmp_name']);
 
             $sql = "INSERT INTO posts (category, title, content, date) VALUES('$category','$title','$content','$date')";
-
 
             $current_id = mysqli_query($con,$sql) or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_error($con));
 
@@ -81,18 +71,12 @@ if(isset($_POST['category'])) {
 
     }
 
-
     mysqli_query($db, $sql);
 
     header("Location: index66.php");
 
 }
 ?>
-
-
-
-
-
 
 
 <!doctype html>
@@ -120,10 +104,6 @@ if(isset($_POST['category'])) {
     <a class="fa fa-tumblr-square" href="" style="font-size:36px; text-shadow: none; margin-left:-70px; "></a>
     <a  href="sec.php" style="letter-spacing: 0; margin-right:-390px; margin-left:324px;">Post</a>
 
-
-
-
-
 </aside>
 
 
@@ -140,100 +120,57 @@ if(isset($_POST['category'])) {
             <li><a href="lifecoaching.php"> Life Coaching</a></li>
             <li ><a href="contactJeni.php"> Contact</a></li>
         </aside>
-
     </ul>
-
 </div>
-
-
     <body>
     <?php
+        
 echo '<figure <a href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" class="img2" width="1070"  height="360"  /></a></figure>';
 
-
-
-
-
-
     echo'<div class="container">
-        
         <div class="content">
         <div class="content-overlay">
             <a href="" target="_blank" ></a>
-            
                 <a class="eh2" href="">About JENIBEEE
-                
                 <img href="" src="White Sands 8.jpg" class="img3" width="250" height="360">
-
             </a>
         </div>
     </div>';
 
-    ?>
-
-    <?php
-
-
-
     echo'<div class="container">
-        
         <div class="content">
         <div class="content-overlay">
             <a href="" target="_blank" ></a>
-            
                 <a class="eh2" href="">
-                
-                    <a class="twitter-timeline" href="https://twitter.com/jenibeeeee?ref_src=twsrc%5Etfw" height="360" width="254">Tweets by jenibeeeee <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a>
-
-
+                    <a class="twitter-timeline" href="https://twitter.com/jenibeeeee?ref_src=twsrc%5Etfw" height="360" width="254">Tweets by jenibeeeee <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a>                    
             </a>
         </div>
     </div>';
     ?>
-
-
-
-
-
-
-
+        
 <style>
     form{
-
         border-radius: 17px 17px 17px 17px;
         -moz-border-radius: 17px 17px 17px 17px;
         -webkit-border-radius: 17px 17px 17px 17px;
         border: 5px solid #faf7fa;
-
-
         margin-left:50px;
-
     }
 
 
     textarea{
-
-
-
-
         border-radius: 17px 17px 17px 17px;
         -moz-border-radius: 17px 17px 17px 17px;
         -webkit-border-radius: 17px 17px 17px 17px;
         border: 5px solid #faf7fa;
-
         margin-left:100px;
     }
 
     textarea.cat{
-
-
-
-
         border-radius: 17px 17px 17px 17px;
         -moz-border-radius: 17px 17px 17px 17px;
         -webkit-border-radius: 17px 17px 17px 17px;
         border: 5px solid #faf7fa;
-
         margin-left:20px;
     }
 
@@ -243,21 +180,14 @@ echo '<figure <a href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" 
         -moz-border-radius: 17px 17px 17px 17px;
         -webkit-border-radius: 17px 17px 17px 17px;
         border: 5px solid #faf7fa;
-
         margin-left:100px;
         margin-top:100px;
         margin-bottom:15px;
-
         font-size:30px;
-
         font-family:System-ui;
     }
 
-
-
 </style>
-
-
 
     <?php
     if(count($_FILES) > 0 && isset($_POST['category']) ) {
@@ -266,14 +196,10 @@ echo '<figure <a href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" 
         $title = strip_tags($_POST['title']);
         $content = strip_tags($_POST['content']);
 
-
         $category = mysqli_real_escape_string($db, $category);
         $title = mysqli_real_escape_string($db, $title);
         $content = mysqli_real_escape_string($db, $content);
-
-
         $date = date('jS F Y h:i:s A');
-
 
         $sql2 = "INSERT INTO posts (category, title, content, date, imageType ,imageData) 
         VALUES('$category','$title','$content','$date',{$imageProperties['mime']}', '{$imgData}')";
@@ -304,24 +230,9 @@ echo '<figure <a href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" 
         <input placeholder="title" name="title" type="text" autofocus size="48"<br><br>
         <textarea placeholder="content" name="content" rows="20" cols="50"></textarea>
         <textarea class="cat" placeholder="category" name="category" rows="4" cols="37"></textarea>
-
         <input name="post" type="submit" value="Post">
-
-
-
-
-
-
-
-
-
-
-
         </form>
-
-
     <div>
-
 
         <form name="frmImage" enctype="multipart/form-data" action="" method="post" class="frmImageUpload">
             <label>Upload Image File:</label><br/>
@@ -332,8 +243,6 @@ echo '<figure <a href="AboutJeni.php"><img src="IMG_20171008_181042565_HDR.jpg" 
             <input type="submit" value="Submit" class="btnSubmit" />
         </form>
     </div>
-
-
     </body>
     <footer> &copy; Tetra Computing   </footer>
     </html>
