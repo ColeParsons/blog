@@ -6,7 +6,6 @@ $pass = $_POST['pass'];
 
     echo'
         <form method="POST" action="">
-
             Pass <input type="password" name="pass"><br/>
             <input type="submit" name="submit" value="Continue">
         </form>';
