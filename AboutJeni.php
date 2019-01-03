@@ -145,14 +145,11 @@ Thank you for everything you do. May positive vibes always flow your way. Enjoy!
         $('.followSelector').socialProfiles({
             animation: 'chain',
             blur: true,
-            facebook: 'tolgaergin',
-            google: '102336483082058519992',
-            twitter: 'tolgaergin',
-            pinterest: 'tolga',
-            dribbble: 'bbb',
-            behance: 'gokhun',
-            scoutzie: 'gokhun-guneyhan',
-            linkedin: 'tr.linkedin.com/in/tolgaergin'
+            facebook: '',
+            google: '',
+            twitter: '',
+            pinterest: '',
+            
         });
     });
 </script>
