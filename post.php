@@ -73,7 +73,7 @@ if(isset($_POST['category'])) {
 
     mysqli_query($db, $sql);
 
-    header("Location: index66.php");
+    header("Location: index.php");
 
 }
 ?>
