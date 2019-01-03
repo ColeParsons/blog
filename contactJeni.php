@@ -142,10 +142,7 @@ echo'<div class="container">
             facebook: '',
             twitter: '',
             pinterest: '',
-            dribbble: 'bbb',
-            behance: 'gokhun',
-            scoutzie: 'gokhun-guneyhan',
-            linkedin: 'tr.linkedin.com/in/tolgaergin'
+            
         });
     });
 </script>
