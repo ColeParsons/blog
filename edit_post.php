@@ -111,9 +111,9 @@ while($row=mysqli_fetch_assoc($res)){
     <aside id="category">Category</aside>
     <select name="cars">
         <aside id="category">Category:</aside>
-        <option value="volvo">Mind</option>
-        <option value="saab">Body</option>
-        <option value="fiat">Soul</option>
+        <option value="">Mind</option>
+        <option value="">Body</option>
+        <option value="">Soul</option>
     </select>
 </form>
 </body>
